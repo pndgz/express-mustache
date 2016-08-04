@@ -1,0 +1,28 @@
+{
+  "name": "express-mustache",
+  "version": "1.0.0",
+  "description": "express mustache engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pndgz/express-mustache.git"
+  },
+  "keywords": [
+    "express",
+    "mustache"
+  ],
+  "author": "GordonDu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pndgz/express-mustache/issues"
+  },
+  "homepage": "https://github.com/pndgz/express-mustache#readme",
+  "dependencies": {
+    "fs": "0.0.2",
+    "mustache": "^2.2.1",
+    "path": "^0.12.7"
+  }
+}
