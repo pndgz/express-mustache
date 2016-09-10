@@ -26,13 +26,13 @@ function ExpressMustache(config) {
         _settings.extName = config.extName || _settings.extName;
     }
 
-    var _loadPartials = function (template) {
+    var _loadPartials = function (basePath, template) {
         var matches;
         while ((matches = _partialRegExp.exec(template)) != null) {
             var pid = matches[1],
-                partialPath = path.resolve(_settings.basePath, pid + _settings.extName);
+                partialPath = path.resolve(basePath, pid + _settings.extName);
             _partials[pid] = fs.readFileSync(partialPath).toString();
-            _loadPartials(_partials[pid]);
+            _loadPartials(path.dirname(partialPath), _partials[pid]);
             template = template.substr(matches.index + matches[1].length + 5);
         }
     };
@@ -44,7 +44,7 @@ function ExpressMustache(config) {
                 return callback(new Error(err));
             }
             var template = content.toString();
-            _loadPartials(template);
+            _loadPartials(_settings.basePath, template);
             return callback(null, mustache.render(template, options, _partials));
         });
     };
