@@ -22,6 +22,5 @@
   "homepage": "https://github.com/pndgz/express-mustache#readme",
   "dependencies": {
     "mustache": "^2.2.1",
-    "path": "^0.12.7"
   }
 }
