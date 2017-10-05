@@ -1,6 +1,6 @@
 {
   "name": "express-mustache",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "express mustache engine",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/pndgz/express-mustache#readme",
   "dependencies": {
-    "mustache": "^2.2.1",
+    "mustache": "^2.2.1"
   }
 }
